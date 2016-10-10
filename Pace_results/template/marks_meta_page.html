@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<H1 style="align:'center';"> {{ student.name }} ({{ student.usn }})</H1>
+
+<table>
+    <tr>
+        <td> Semester</td>
+        <td> Attempt</td>
+        <td> Total Marks</td>
+        <td> Results</td>
+        <td> Percentage</td>
+    </tr>
+
+    {% for meta_obj in student_marks_meta_info %}
+    <tr>
+        <td> {{ meta_obj.semester }}</td>
+        <td> {{ meta_obj.attempt }}</td>
+        <td> {{ meta_obj.total_marks }}</td>
+        <td> {{ meta_obj.result }}</td>
+        <td> {{ meta_obj.percentage }}</td>
+        <td><a href="/marks_details/{{ meta_obj.id }}"> view results </a></td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+
+</body>
+</html>

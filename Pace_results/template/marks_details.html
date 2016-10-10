@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td> Subject</td>
+        <td> Sub Code</td>
+        <td> Internal Marks</td>
+        <td> External Marks</td>
+        <td> Total Marks</td>
+        <td> Result</td>
+    </tr>
+
+    {% for marks in marks_list %}
+    <tr>
+        <td> {{ marks.subject.name }}</td>
+        <td> {{ marks.subject.subject_code }}</td>
+        <td> {{ marks.internal_marks }}</td>
+        <td> {{ marks.external_marks }}</td>
+        <td> {{ marks.total_marks }}</td>
+        <td> {{ marks.result }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
